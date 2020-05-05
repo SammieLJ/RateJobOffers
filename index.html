@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oddaja vlog - testna naloga za MojeDelo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="StarRating.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+  </head>
+  <body>
+      <header></header>
+    <div id="oddaja_vloge">
+        <fieldset>
+            <h2>ODDAJA VLOGE</h2>
+            <div class="spremni_text">Izpolnite spodnja polja in oddajte vlogo.<br />
+            če se želite potegovati za izbrano delovno mesto
+            </div><br>
+			<input id="first" type="text" placeholder="Ime" autofocus /><br /><br />
+
+			<input id="last" type="text" placeholder="Priimek" /><br /><br />
+            
+            <input id="address" type="text" placeholder="Naslov" /><br /><br />
+
+            <textarea id="opis_vloge" rows="4" cols="50">Zakaj ste vi najbolj primerni za izbrano delo?</textarea><br /><br />
+
+            <button id="addButton" class="wide_buttn" type="button">ODDAJ</button><br /><br />
+        </fieldset><br />
+        <a href="#" class="admin_link" onClick="showAdminForm();">Prijavi se kot administrator</a>
+    </div>
+    <div id="vloga_oddana">
+        <fieldset>
+            <img src="blue-tick-inside-circle.svg" alt="checkmark circle" style="width: 128px;height: 128px;">
+            <h2>VLOGA USPEŠNA ODDANA</h2>
+            <div class="spremni_text">Vaša vloga je bila oddana v preverjanje.<br />
+                Po pregledu Vas bodo naši uslužbenci<br />
+                o rezultatu vas obvestimo preko elektronske pošte,<br />
+                ki je navedena v našem uporabniškem profilu.
+            </div><br /><br />
+            <button id="addNewApplication" class="wide_buttn">NOVA ODDAJA</button><br /><br />
+        </fieldset><br />
+        <a href="#" class="admin_link" onClick="showAdminForm();">Prijavi se kot administrator</a>
+    </div>
+    <div id="prijava_admina">
+        <fieldset>
+            <h2>PRIJAVA</h2>
+            <div class="spremni_text">Vpišite vaše uporabniško ime in geslo</div><br /><br />
+			<input id="admin_upor_ime" type="text" placeholder="Uporabniško ime" /><br /><br />
+
+			<input id="admin_upor_geslo" type="password" placeholder="Geslo" /><br /><br />
+
+            <button id="addAdminLogin" class="wide_buttn" autofocus>PRIJAVA</button><br /><br />
+        </fieldset>
+    </div>
+    <div id="pregled_vlog_admin">
+            
+    </div>
+    <script id="vlogaContainerTemplate" type="text/x-jsrender">
+        <div id="{{:clone_vloga_container}}" class="cloner">
+            <input type="hidden" id=˘{{:clone_Id}}" name="Id" value="{{:clone_Id}}">
+            <span class="span_label" id="label_vloga_ime">Ime</span>
+            <div id="vloga_ime">{{:clone_vloga_ime}}
+            </div>
+            <span class="span_label" id="label_vloga_priimek">Priimek</span>
+            <div id="vloga_priimek">{{:clone_vloga_priimek}}
+            </div>
+            <span class="span_label" id="label_vloga_naslov">Naslov</span>
+            <div id="vloga_naslov">{{:clone_vloga_naslov}}
+            </div>
+            <span class="span_label" id="label_rating">Oceni vlogo:</span>
+            <x-star-rating value="{{:clone_rating}}" number="5" id="{{:rating_name}}">{{:clone_rating}}</x-star-rating>
+            <span class="span_label" id="label_vloga_opis">Opis</span>
+            <div id="vloga_opis">{{:clone_vloga_opis}}
+            </div>
+        </div><br /><br />
+    </script>
+    <div id="ni_objavljenih_vlog"><h1 class="levo_poravnaj">Ni objaveljen nobene vloge!</h1>
+        <a href="#" class="admin_odjava" onClick="timerLogOff()">ODJAVA</a>
+    </div>
+    <br><br><br>
+    <footer></footer>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jsrender.min.js"></script>
+    <script src="script.js"></script>
+    <script src="StarRating.js"></script>
+  </body>
+</html>

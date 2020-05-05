@@ -1,0 +1,243 @@
+html {
+    height: 1000px;width: auto;
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background-image: linear-gradient(to bottom, #1e5799,#2989d8,#207cca,#7db9e8);
+    font-family: OpenSans-Regular, sans-serif;
+}
+
+body {
+    text-align:center;
+    margin:auto;color:#f3f3f3;padding-top:105px;
+}
+
+input {
+    width: 400px;
+    padding-left: 10px;
+    /*border-color: #2989d8 !important;*/
+    color: #303030 !important; /* za text */
+    background-color: #fff !important;
+    border: 1px solid #2989d8 !important;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+h1 {
+    color: #1e5799;
+}
+h2 {
+    /*color: cornflowerblue;*/
+    color:#207cca;
+}
+.levo_poravnaj {
+    text-align: left !important;
+    /*width: 60%;*/
+    margin: 0%;
+    display: inline;
+}
+
+.spremni_text {
+    color: darkslategrey;
+}
+
+.admin_link {
+    color:azure;
+}
+
+.admin_odjava {
+    color:#207cca;
+    /*position: absolute;*/
+    position: relative;
+    /*margin-top: 20px;
+    margin-right: 20px;
+    width: 10%;*/
+    margin-top: 10px;
+    float: right;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    /*top: 12%;
+    right: 8%;*/
+}
+
+textarea {
+    /* -14px */
+    width: 386px;
+    height: 250px;
+    padding-left: 10px;
+    border-color: #2989d8 ;
+}
+.wide_buttn {
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    /*padding: 0 20px;*/
+    padding: 0;
+    width: 400px;
+    height: 40px;
+    background-color: #2989d8;
+    /*font-family: OpenSans-Regular;*/
+    font-size: 18px;
+    font-weight: bolder;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+fieldset {
+	margin: auto;
+    width: 45%;
+    height: auto;
+    background-color: #fff;
+    border-color: #2989d8 ;
+}
+
+/* v index-u je id namesto class-a */
+#vloga_priimek {
+    position: relative;
+    float: left;
+}
+
+#ni_objavljenih_vlog {
+    margin: auto;
+    width: 85%;
+    min-width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-color: #2989d8 ;
+    /* padding top, right, bottom, left */
+    padding: 10px 25px 35px 25px;
+}
+
+#pregled_vlog_admin {
+    text-align: left !important;
+    margin: auto;
+    width: 85%;
+    min-width: 600px;
+    height: auto;
+    background-color: #fff;
+    border-color: #2989d8 ;
+    /* padding top, right, bottom, left */
+    padding: 10px 25px 35px 25px;
+}
+
+/*#vloga_container {*/
+.cloner {
+    text-align: left !important;
+    background-color:#F8F8F8;/*#F8F8F8*/
+    border-color: #303030;/*#303030*/
+    /* for fonts */
+    color:black;
+    position: relative;
+    /*float: left;*/
+    /*position: absolute;*/
+    margin-top: 20px;
+    /*width: 900px;*/
+    width: auto;
+    min-width: 500px;
+    height: 200px;
+}
+
+.span_label {
+    color: #207cca;
+    font-weight: bold;
+    /*position: relative;*/
+    position: absolute;
+    /*float: left;*/
+    width: 50 px;
+    height: 20 px;
+}
+
+#vloga_ime, #vloga_priimek, #vloga_naslov, x-star-rating {
+    position: absolute;
+    /*position: relative;*/
+    /*float: left;*/
+    width: 100 px;
+    height: 80 px;
+    /*margin: 1.858736059%;
+    width: 29.615861214%;*/
+}
+#label_vloga_ime {
+    top: 7%;
+    left: 2%;
+}
+#vloga_ime {
+    top: 20%;
+    left: 2%;
+}
+#label_vloga_priimek {
+    top: 7%;
+    left: 17%;
+}
+#vloga_priimek {
+    top: 20%;
+    left: 17%;
+}
+#label_vloga_naslov {
+    top: 7%;
+    left: 32%;
+}
+#vloga_naslov {
+    top: 20%;
+    left: 32%;
+}
+#label_rating{
+    top: 62%;
+    left: 2%;
+}
+/*#rating_liha, #rating_soda {*/
+x-star-rating {
+    position: absolute;
+    top: 62%;
+    left: 28%;
+    /*width: 50 px;
+    height: 20 px;*/
+}
+#label_vloga_opis {
+    top: 7%;
+    left: 60%;
+}
+#vloga_opis {
+    position: absolute;
+    /*position: relative;*/
+    /*float: right;*/
+    /*margin-top: 20px;*/
+    /*margin-right: auto;*/
+    text-align: left !important;
+    top: 20%;
+    left: 60%;
+    width: 200 px;
+    height: 180 px;
+}
+
+.pagination {
+    /*display: inline-block;*/
+    /*text-align: right !important;*/
+    /*text-align: right; width: 100%;*/
+    position: relative;
+    float: right;
+    font-size: 14px;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .pagination a.active {
+    background-color: #207cca;
+    color: white;
+    border-radius: 5px;
+    /*color: #207cca;*/
+    font-weight: bold;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
